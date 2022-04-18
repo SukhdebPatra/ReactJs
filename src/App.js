@@ -1,15 +1,29 @@
-import React,{Component} from 'react';
+
 import './App.css';
-import Product from './Product';
-import Producta from './Producta';
+import react from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Navbar from './Navabar'
+import ContactApp from './ContactApp';
+
+
 function App() {
-  return <>
-  <h1>App Component</h1>
-  <hr/>
-  <Product/>
-  <hr/>
-  <Producta/>
-  </>
+  return(
+    <>
+    <Router>
+      <Navbar/>
+     
+      <Routes>
+                <Route path="/contact" element={<ContactApp />} />
+            </Routes>
+      
+      
+    </Router>
+    </>
+  ) 
+   
+    
+
 }
 
 export default App;
